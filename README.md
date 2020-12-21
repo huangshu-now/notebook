@@ -1,10 +1,12 @@
-＃1. 代码总览
-https://github.com/huangshu-now/notebook/blob/main/3.png
-https://github.com/huangshu-now/notebook/blob/main/4.png
-2.功能一 时间戳
-预览：https://github.com/huangshu-now/notebook/blob/main/1.png
+#1. 代码总览
+![](https://github.com/huangshu-now/notebook/blob/main/3.png)
+![](https://github.com/huangshu-now/notebook/blob/main/4.png)
+#2.功能
+##* 功能一 时间戳
+预览：![](https://github.com/huangshu-now/notebook/blob/main/1.png)
 基本功能代码：
 从数据库获得每个笔记的时间
+```
     private void getNoteList(){
         noteList.clear();
         Cursor allNotes = Note.getAllNotes(dbHelper);
@@ -36,16 +38,18 @@ https://github.com/huangshu-now/notebook/blob/main/4.png
             android:textSize="16sp"
             android:gravity="center_vertical"
             android:singleLine="true"/>
+            ```
            
-功能二 搜索（根据标题）
-预览：https://github.com/huangshu-now/notebook/blob/main/2.png
+##* 功能二 搜索（根据标题）
+预览：![](https://github.com/huangshu-now/notebook/blob/main/2.png)
 添加布局
-<SearchView
+```<SearchView
         android:id="@+id/search2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
     </SearchView>
+    ```
     修改notelist中布局文件
   setContentView(R.layout.searchview);
 设置监听器
