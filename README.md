@@ -1,9 +1,9 @@
-#1. 代码总览
-![](https://github.com/huangshu-now/notebook/blob/main/3.png)
-![](https://github.com/huangshu-now/notebook/blob/main/4.png)
-#2.功能
-##* 功能一 时间戳
-预览：![](https://github.com/huangshu-now/notebook/blob/main/1.png)
+#1. 代码总览 <br>
+![](https://github.com/huangshu-now/notebook/blob/main/3.png)<br>
+![](https://github.com/huangshu-now/notebook/blob/main/4.png)<br>
+#2.功能<br>
+##* 功能一 时间戳<br>
+预览：![](https://github.com/huangshu-now/notebook/blob/main/1.png)<br>
 基本功能代码：
 ```
 从数据库获得每个笔记的时间
@@ -45,7 +45,7 @@
             android:singleLine="true"/>
 ```
            
-##* 功能二 搜索（根据标题）
+##* 功能二 搜索（根据标题）<br>
 预览：![](https://github.com/huangshu-now/notebook/blob/main/2.png)
 ```
 添加布局
