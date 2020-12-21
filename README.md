@@ -5,8 +5,8 @@
 ##* 功能一 时间戳
 预览：![](https://github.com/huangshu-now/notebook/blob/main/1.png)
 基本功能代码：
-从数据库获得每个笔记的时间
 ```
+从数据库获得每个笔记的时间
     private void getNoteList(){
         noteList.clear();
         Cursor allNotes = Note.getAllNotes(dbHelper);
@@ -18,6 +18,8 @@
             noteInfo.setDate(allNotes.getString(allNotes.getColumnIndex(Note.time)));
             noteList.add(noteInfo);
         }
+```
+```
   初始化视图
     }public ViewHolder(View itemView) {
         if (itemView == null){
@@ -29,7 +31,10 @@
         itemNoteDate = itemView.findViewById(R.id.item_note_date);
 
     }
-    添加布局
+```
+    
+添加布局
+```
 <TextView
             android:id="@+id/item_note_date"
             android:layout_width="match_parent"
@@ -38,20 +43,24 @@
             android:textSize="16sp"
             android:gravity="center_vertical"
             android:singleLine="true"/>
-            ```
+```
            
 ##* 功能二 搜索（根据标题）
 预览：![](https://github.com/huangshu-now/notebook/blob/main/2.png)
+```
 添加布局
-```<SearchView
+<SearchView
         android:id="@+id/search2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
     </SearchView>
-    ```
-    修改notelist中布局文件
+```
+```
+修改notelist中布局文件
   setContentView(R.layout.searchview);
+```
+```
 设置监听器
   private void SearchView(final SimpleCursorAdapter adapter) {
         SearchView searchView = findViewById(R.id.search2);
@@ -61,12 +70,10 @@
             public boolean onQueryTextSubmit(String query) {
                 return false;
             }
-
             @Override
             public boolean onQueryTextChange(String s) {
                 Cursor newCursor;
-
-                if (!s.equals("")) {
+              if (!s.equals("")) {
                     String selection = NotePad.Notes.COLUMN_NAME_TITLE + " GLOB '*" + s + "*'";
                     newCursor = getContentResolver().query(
                             getIntent().getData(),
@@ -89,6 +96,7 @@
             }
         });
     }
+```
 
 
 
